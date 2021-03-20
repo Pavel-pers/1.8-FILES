@@ -1,0 +1,55 @@
+/ ------ Powerful Drops ------
+
+/ Astral Axe
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=LuckyProjectile,posOffsetY=0.1,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=lootplusplus:astral.astral_axe),damage=30.0))@luck=2
+
+/ Temporary Wolves
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=LuckyProjectile,posOffsetY=0.1,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=spawn_egg,Damage=95),impact=["group(type=command,ID=\"scoreboard objectives add astralTemp dummy\";type=entity,ID=Wolf,amount=#rand(1,5),NBTTag=(CollarColor=#rand(0,14),Owner=#pName,CustomName=\"#pName's Temporary Puppy\",Age=-1000000,ForgeData=(Temp=true));type=command,ID=\"scoreboard players set @e[type=Wolf] astralTemp 1 {ForgeData:{Temp:true}}\";type=command,ID=\"entitydata @e[type=Wolf,score_astralTemp_min=1,r=0] {ForgeData:{Temp:true,LootPPCommands:{CommandList:[0:\"lppcondition effect @e[r=0] minecraft:instant_damage 1 5 _if_true_ tp @e[type=Wolf,r=0,score_astralTemp_min=1] ~ ~-1000 ~\"],Delays:[500]}}}\")"]))@luck=1@chance=2
+
+/ Unlucky Potion
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=LuckyProjectile,pos=#bowPos,NBTTag=(Motion=#bowMotion(1.0,2.0),item=(id=potion,Damage=16460),impact=["type=entity,ID=ThrownPotion,NBTTag=(Potion=(id=potion,Count=1,Damage=16460,tag=(CustomPotionEffects=#unluckyPotionEffects)))"]))@luck=2@chance=0.5
+
+/ ------ Neutral Drops ------
+
+/ Arrow Stream
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=Arrow,pos=#bowPos,NBTTag=(Motion=#bowMotion),amount=30,delay=#rand(0.0,3.0))@luck=1
+
+/ Star Stream
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=lootplusplus.ThrownItem,pos=#bowPos,NBTTag=(ItemThrown=lootplusplus:astral.throwing_star,Motion=#bowMotion),amount=30,delay=#rand(0.0,3.0))@luck=1
+
+/ Knockback
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=LuckyProjectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=feather),impact=["group(type=effect,ID=special_knockback,power=2.5,range=4,delay=0.1;type=particle,ID=explode,size=(1.5,1.0,1.5),particleAmount=500)"]))@luck=2@chance=3
+
+/ Perplexity
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=LuckyProjectile,pos=#bowPos,NBTTag=(Motion=#bowMotion(1.0,2.0),item=(id=potion,Damage=16393),impact=["group(type=effect,ID=potioncore:perplexity,range=4,amplifier=0,duration=10;type=particle,ID=splashpotion,damage=8201)"]))@luck=2
+
+/ Disorganization
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=LuckyProjectile,pos=#bowPos,NBTTag=(Motion=#bowMotion(1.0,2.0),item=(id=potion,Damage=16388),impact=["group(type=effect,ID=potioncore:disorganization,range=4,amplifier=0;type=particle,ID=splashpotion,damage=8196)"]))@luck=2
+
+/ Weight
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=LuckyProjectile,pos=#bowPos,NBTTag=(Motion=#bowMotion(1.0,2.0),item=(id=anvil),impact=["group(type=effect,ID=potioncore:weight,range=4,amplifier=1,duration=10;type=particle,ID=splashpotion,damage=8234)"]))@luck=2
+
+/ ------ Somewhat Destructive Drops ------
+
+/ Spider Web
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=LuckyProjectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=web),impact=["type=command,ID=\"fill ~ ~ ~ ~ ~1 ~ web 0 keep\""]))@luck=1
+
+/ Lava
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=LuckyProjectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=lava_bucket),trail=(frequency=0.5,drops=["type=particle,ID=lava"]),impact=["group(type=command,ID=\"fill ~-2 ~-1 ~-2 ~2 ~ ~2 flowing_lava 8 keep\")"]))@luck=-1
+
+/ Meteorite
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=LuckyProjectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=fire_charge),trail=(frequency=0.1,drops=["type=particle,ID=flame,posY=#bExactPosY+0.4"]),impact=["type=explosion,damage=4,fire=true"]))@chance=0.5@luck=-2
+
+/ Lightning
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=LuckyProjectile,pos=#bowPos,NBTTag=(Motion=#bowMotion,item=(id=nether_star),trail=(frequency=0.1,drops=["type=particle,ID=fireworksSpark,posY=#bExactPosY+0.4"]),impact=["type=entity,ID=LightningBolt"]))@luck=2
+
+/ Exploding throwing star
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=lootplusplus.ThrownItem,pos=#bowPos,NBTTag=(ItemThrown=lootplusplus:astral.throwing_star_explode,Motion=#bowMotion))@luck=-1@chance=20
+
+/ ------ Throwing Stars ------
+
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=lootplusplus.ThrownItem,pos=#bowPos,NBTTag=(ItemThrown=lootplusplus:#randList(astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star_fire,astral.throwing_star_fire,astral.throwing_star_ice,astral.throwing_star_ice,astral.throwing_star_poison,astral.throwing_star_dark,astral.throwing_star_dark),Motion=#bowMotion))@luck=-2@chance=200
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=lootplusplus.ThrownItem,pos=#bowPos,NBTTag=(ItemThrown=lootplusplus:#randList(astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star_fire,astral.throwing_star_fire,astral.throwing_star_ice,astral.throwing_star_ice,astral.throwing_star_poison,astral.throwing_star_dark,astral.throwing_star_dark),Motion=#bowMotion))@luck=-1@chance=120
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=lootplusplus.ThrownItem,pos=#bowPos,NBTTag=(ItemThrown=lootplusplus:#randList(astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star_fire,astral.throwing_star_fire,astral.throwing_star_ice,astral.throwing_star_ice,astral.throwing_star_poison,astral.throwing_star_dark,astral.throwing_star_dark),Motion=#bowMotion))@luck=0@chance=80
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=lootplusplus.ThrownItem,pos=#bowPos,NBTTag=(ItemThrown=lootplusplus:#randList(astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star_fire,astral.throwing_star_fire,astral.throwing_star_ice,astral.throwing_star_ice,astral.throwing_star_poison,astral.throwing_star_dark,astral.throwing_star_dark),Motion=#bowMotion))@luck=1@chance=60
+group(type=command,ID="give @p[name=#pName] arrow";type=entity,ID=lootplusplus.ThrownItem,pos=#bowPos,NBTTag=(ItemThrown=lootplusplus:#randList(astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star,astral.throwing_star_fire,astral.throwing_star_fire,astral.throwing_star_ice,astral.throwing_star_ice,astral.throwing_star_poison,astral.throwing_star_dark,astral.throwing_star_dark),Motion=#bowMotion))@luck=2@chance=40

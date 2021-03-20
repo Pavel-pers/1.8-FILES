@@ -1,0 +1,23 @@
+>properties
+length=1
+height=1
+width=1
+
+>blocks
+
+/ lucky block with the possible rooms
+
+0,0,0,lucky:lucky_block_astral,0,(Drops=["group(type=block,ID=air,posOffsetX=-2;type=fill,posOffset=(-1,-1,-1),ID=air,size=(1,3,3);group:1:( \
+
+/ choose one room
+
+/ normal rooms
+type=structure,ID=astral_starship_room_armory;\
+type=structure,ID=astral_starship_room_computers;\
+type=structure,ID=astral_starship_room_engine;\
+type=structure,ID=astral_starship_room_food;\
+type=structure,ID=astral_starship_room_hall;\
+type=structure,ID=astral_starship_room_quarters;\
+type=structure,ID=astral_starship_room_view\
+
+),posOffsetX=3)"])

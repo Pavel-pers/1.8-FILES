@@ -1,0 +1,1 @@
+lootplusplus:astral.fluffy_cloud_____-1_____1.0_____lppeffect @e[r=0] potioncore:slowfall 2 3 true

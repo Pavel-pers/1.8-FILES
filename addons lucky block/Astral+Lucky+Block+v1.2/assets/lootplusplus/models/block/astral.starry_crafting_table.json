@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "lootplusplus:blocks/astral.starry_crafting_table_top",
+        "down": "lootplusplus:blocks/astral.starry",
+        "up": "lootplusplus:blocks/astral.starry_crafting_table_top",
+        "north": "lootplusplus:blocks/astral.starry_crafting_table_side1",
+        "east": "lootplusplus:blocks/astral.starry_crafting_table_side1",
+        "south": "lootplusplus:blocks/astral.starry_crafting_table_side1",
+        "west": "lootplusplus:blocks/astral.starry_crafting_table_side1"
+    }
+}

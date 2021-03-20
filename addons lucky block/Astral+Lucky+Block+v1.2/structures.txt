@@ -1,0 +1,82 @@
+/ kits
+ID=astral_kit_end,file=kits/astral_kit_end.schematic
+ID=astral_kit_love,file=kits/astral_kit_love.schematic
+ID=astral_kit_lucky,file=kits/astral_kit_lucky.schematic
+ID=astral_kit_decorative,file=kits/astral_kit_decorative.schematic
+ID=astral_kit_greenhouse,file=kits/astral_kit_greenhouse.schematic
+ID=astral_kit_rail,file=kits/astral_kit_rail.schematic
+ID=astral_kit_rainbow,file=kits/astral_kit_rainbow.schematic
+ID=astral_kit_table,file=kits/astral_kit_table.schematic
+ID=astral_kit_recipe,file=kits/astral_kit_recipe.schematic
+ID=astral_kit_potion,file=kits/astral_kit_potion.schematic
+ID=astral_kit_horse,file=kits/astral_kit_horse.schematic
+
+/ beacons
+ID=astral_beacon_fire,file=beacons/astral_beacon_fire.schematic,centerY=1
+ID=astral_beacon_speed,file=beacons/astral_beacon_speed.schematic,centerY=1
+ID=astral_beacon_health,file=beacons/astral_beacon_health.schematic,centerY=1
+ID=astral_beacon_heal,file=beacons/astral_beacon_heal.schematic,centerY=1
+ID=astral_beacon_strength,file=beacons/astral_beacon_strength.schematic,centerY=1
+ID=astral_beacon_confuse,file=beacons/astral_beacon_confuse.schematic,centerY=1
+ID=astral_beacon_wither,file=beacons/astral_beacon_wither.schematic,centerY=1
+ID=astral_beacon_poison,file=beacons/astral_beacon_poison.schematic,centerY=1
+ID=astral_beacon_blind,file=beacons/astral_beacon_blind.schematic,centerY=1
+
+/ well
+ID=astral_well,file=astral_well.schematic,centerY=2
+
+/ traps
+ID=astral_silverfish_trap,file=astral_silverfish_trap.schematic,centerY=3
+ID=astral_quicktile_trap,file=astral_quicktile_trap.schematic,centerY=3
+
+/ other
+ID=astral_redstone_rocket,file=astral_redstone_rocket.schematic
+ID=astral_mushroom_house,file=astral_mushroom_house.schematic,centerY=1
+ID=astral_nether_portal,file=astral_nether_portal.schematic,blockMode=overlay
+ID=astral_end_shrine,file=astral_end_shrine.schematic
+ID=astral_meteor,file=astral_meteor.schematic,blockMode=overlay
+ID=astral_obsidian_maze,file=astral_obsidian_maze.schematic
+ID=astral_cloud_dweller,file=astral_cloud_dweller.schematic
+ID=astral_market,file=astral_market.schematic,centerY=1
+
+/ giant block
+ID=giant_astral_block_break_stage_1,file=giant_blocks/break_astral_stage_1.schematic,blockMode=overlay,centerZ=7
+ID=giant_astral_block_break_stage_2,file=giant_blocks/break_astral_stage_2.schematic,blockMode=overlay,centerZ=7
+ID=giant_astral_block_break_stage_3,file=giant_blocks/break_astral_stage_3.schematic,blockMode=overlay,centerZ=7
+ID=giant_astral_block_break_stage_4,file=giant_blocks/break_astral_stage_4.schematic,blockMode=overlay,centerZ=7
+ID=giant_astral_block_break_stage_5,file=giant_blocks/break_astral_stage_5.schematic,blockMode=overlay,centerZ=7
+ID=giant_astral_lucky_block_good,file=giant_blocks/giant_astral_lucky_block.schematic,centerZ=7,overlayStruct=giant_astral_lucky_block_inner_good
+ID=giant_astral_lucky_block_inner_good,file=giant_blocks/giant_astral_lucky_block_inner_good.luckystruct,blockMode=overlay,centerZ=7
+ID=giant_astral_lucky_block_bad,file=giant_blocks/giant_astral_lucky_block.schematic,centerZ=7,overlayStruct=giant_astral_lucky_block_inner_bad
+ID=giant_astral_lucky_block_inner_bad,file=giant_blocks/giant_astral_lucky_block_inner_bad.luckystruct,blockMode=overlay,centerZ=7
+ID=giant_astral_lucky_block_neutral,file=giant_blocks/giant_astral_lucky_block.schematic,centerZ=7,overlayStruct=giant_astral_lucky_block_inner_neutral
+ID=giant_astral_lucky_block_inner_neutral,file=giant_blocks/giant_astral_lucky_block_inner_neutral.luckystruct,blockMode=overlay,centerZ=7
+
+/ temples
+ID=astral_neutral_fort,file=forts_temples/astral_neutral_fort.schematic,overlayStruct=astral_neutral_fort_inner,centerY=1
+ID=astral_neutral_fort_inner,file=forts_temples/astral_neutral_fort_inner.luckystruct,blockMode=overlay
+ID=astral_lucky_fort,file=forts_temples/astral_lucky_fort.schematic,overlayStruct=astral_lucky_fort_inner,centerY=1
+ID=astral_lucky_fort_inner,file=forts_temples/astral_lucky_fort_inner.luckystruct,blockMode=overlay
+ID=astral_unlucky_fort,file=forts_temples/astral_unlucky_fort.schematic,overlayStruct=astral_unlucky_fort_inner,centerY=1
+ID=astral_unlucky_fort_inner,file=forts_temples/astral_unlucky_fort_inner.luckystruct,blockMode=overlay
+
+ID=astral_neutral_temple,file=forts_temples/astral_neutral_temple.schematic,overlayStruct=astral_neutral_temple_inner,centerY=1
+ID=astral_neutral_temple_inner,file=forts_temples/astral_neutral_temple_inner.luckystruct,blockMode=overlay,centerY=1
+ID=astral_lucky_temple,file=forts_temples/astral_lucky_temple.schematic,overlayStruct=astral_lucky_temple_inner,centerY=1
+ID=astral_lucky_temple_inner,file=forts_temples/astral_lucky_temple_inner.luckystruct,blockMode=overlay,centerY=1
+ID=astral_unlucky_temple,file=forts_temples/astral_unlucky_temple.schematic,overlayStruct=astral_unlucky_temple_inner,centerY=1
+ID=astral_unlucky_temple_inner,file=forts_temples/astral_unlucky_temple_inner.luckystruct,blockMode=overlay,centerY=1
+
+/ starship
+ID=astral_starship_base,file=starship/astral_starship_base.schematic
+ID=astral_starship_room_armory,file=starship/astral_starship_room_armory.schematic,blockMode=overlay,centerY=2
+ID=astral_starship_room_computers,file=starship/astral_starship_room_computers.schematic,blockMode=overlay,centerY=2
+ID=astral_starship_room_engine,file=starship/astral_starship_room_engine.schematic,blockMode=overlay,centerY=2
+ID=astral_starship_room_food,file=starship/astral_starship_room_food.schematic,blockMode=overlay,centerY=2
+ID=astral_starship_room_hall,file=starship/astral_starship_room_hall.schematic,blockMode=overlay,centerY=2
+ID=astral_starship_room_quarters,file=starship/astral_starship_room_quarters.schematic,blockMode=overlay,centerY=2
+ID=astral_starship_room_view,file=starship/astral_starship_room_view.schematic,blockMode=overlay,centerY=2
+ID=astral_starship_room_boss,file=starship/astral_starship_room_boss.schematic,blockMode=overlay,centerY=2
+ID=astral_starship_room_top,file=starship/astral_starship_room_top.luckystruct
+ID=astral_starship_room_bottom,file=starship/astral_starship_room_bottom.luckystruct
+ID=astral_starship_room_skelatron,file=starship/astral_starship_room_skelatron.luckystruct

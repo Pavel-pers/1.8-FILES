@@ -1,0 +1,3 @@
+astral.little_heart_____Little Hearts_____false_____0_____0.0_____false_____true_____12_____instant_health-1-0-1.0-normal
+astral.fairy_____Fairy_____false_____0_____0.0_____false_____true_____1_____instant_health-5-0-1.0-normal
+astral.star_cookie_____Star Cookie_____false_____20_____20.0_____false_____false_____20_____potioncore:bless-1-0-1.0-normal

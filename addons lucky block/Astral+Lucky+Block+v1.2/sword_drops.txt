@@ -1,0 +1,60 @@
+/ ------ Powerful Effects ------
+
+/ Astral Stars
+type=entity,ID=lootplusplus.ThrownItem,pos=#pExactPos,posOffsetY=1.5,NBTTag=(ItemThrown=lootplusplus:astral.throwing_star,Motion=#motionFromDirection(#pYaw+#rand(-10,10),#pPitch+#rand(-10,10), 1.0)),amount=5,delay=#rand(0.0,2.0)@luck=2@chance=10
+
+/ Temporary Wolves
+group(type=command,ID="scoreboard objectives add astralTemp dummy";type=entity,ID=Wolf,amount=#rand(1,5),NBTTag=(CollarColor=#rand(0,14),Owner=#pName,CustomName="#pName's Temporary Puppy",Age=-1000000,ForgeData=(Temp=true));type=command,ID="scoreboard players set @e[type=Wolf] astralTemp 1 {ForgeData:{Temp:true}}";type=command,ID="entitydata @e[type=Wolf,score_astralTemp_min=1,r=0] {ForgeData:{Temp:true,LootPPCommands:{CommandList:[0:"lppcondition effect @e[r=0] minecraft:instant_damage 1 5 _if_true_ tp @e[type=Wolf,r=0,score_astralTemp_min=1] ~ ~-1000 ~"],Delays:[500]}}}")@luck=2@chance=3
+
+/ Health + Regeneration
+group(type=effect,ID=6,amplifier=#rand(2,6),duration=0;type=effect,ID=10,amplifier=#rand(1,2),duration=#rand(5,10);type=particle,ID=heart,size=(0.5,0.5,0.5),particleAmount=50,pos=#pExactPos)@luck=2
+
+/ ------ Neutral Effects ------
+
+/ Web
+type=entity,ID=LuckyProjectile,pos=#pExactPos,posOffsetY=1.5,NBTTag=(Motion=#motionFromDirection(#pYaw,#pPitch,1.5),item=(id=web,Count=1),impact=["type=command,ID=\"fill ~ ~ ~ ~ ~1 ~ web 0 keep\""])@luck=2@chance=0.5
+
+/ Flames
+type=entity,ID=LuckyProjectile,pos=#pExactPos,posOffsetY=1.5,NBTTag=(Motion=#motionFromDirection(#pYaw+#rand(-10,10),#pPitch+#rand(-10,10),1.0),item=(id=lootplusplus:astral.throwing_star_fire,Count=1),impact=["type=effect,ID=special_fire,target=hitEntity,duration=5"],damage=0.0),amount=50,delay=#rand(0.0,2.0)@luck=2@chance=2
+
+/ Poison + Nausea
+type=entity,ID=LuckyProjectile,pos=#pExactPos,posOffsetY=1.5,NBTTag=(Motion=#motionFromDirection(#pYaw+#rand(-10,10),#pPitch+#rand(-10,10),1.0),item=(id=lootplusplus:astral.throwing_star_poison,Count=1),impact=["group(type=effect,ID=poison,target=hitEntity,amplifier=2,duration=5;type=effect,ID=nausea,target=hitEntity,duration=10)"],damage=0.0),amount=50,delay=#rand(0.0,2.0)@luck=2@chance=2
+
+/ Ice
+type=entity,ID=LuckyProjectile,pos=#pExactPos,posOffsetY=1.5,NBTTag=(Motion=#motionFromDirection(#pYaw+#rand(-10,10),#pPitch+#rand(-10,10),1.0),item=(id=lootplusplus:astral.throwing_star_ice,Count=1),impact=["type=effect,ID=slowness,target=hitEntity,amplifier=3,duration=5"],damage=0.0),amount=50,delay=#rand(0.0,2.0)@luck=2@chance=2
+
+/ Wither + Blindness
+type=entity,ID=LuckyProjectile,pos=#pExactPos,posOffsetY=1.5,NBTTag=(Motion=#motionFromDirection(#pYaw+#rand(-10,10),#pPitch+#rand(-10,10),1.0),item=(id=lootplusplus:astral.throwing_star_dark,Count=1),impact=["group(type=effect,ID=wither,target=hitEntity,amplifier=2,duration=5;type=effect,ID=blindness,target=hitEntity,duration=5)"],damage=0.0),amount=50,delay=#rand(0.0,2.0)@luck=2@chance=2
+
+/ Burst
+group(type=entity,ID=LuckyProjectile,pos=#pExactPos,posOffsetY=1.5,NBTTag=(Motion=#motionFromDirection(#pYaw+#rand(-10,10),#pPitch+#rand(-10,10),1.0),item=(id=lootplusplus:astral.throwing_star_explode,Count=1),damage=0.0),amount=25,delay=#rand(0.0,1.0);type=effect,ID=potioncore:burst,amplifier=1)@luck=2@chance=2
+
+/ Knockback
+group(type=effect,ID=special_knockback,range=6,excludePlayer=true,power=1.8,pos=#pPos,delay=0.1;type=particle,ID=explode,size=(1.0,0.3,1.0),particleAmount=500,pos=#pExactPos)@luck=2
+
+/ Launch
+group(type=effect,ID=potioncore:launch,amplifier=1,target=hitEntity;type=particle,ID=explode,size=(0.5,0.5,0.5),particleAmount=500)@luck=2
+
+/ Perplexity
+group(type=effect,ID=potioncore:perplexity,target=hitEntity,duration=5;type=particle,ID=witchMagic,size=(0.5,0.5,0.5),particleAmount=500)@luck=2
+
+/ Disorganization
+group(type=effect,ID=potioncore:disorganization,target=hitEntity;type=particle,ID=happyVillager,size=(0.5,0.5,0.5),particleAmount=500)@luck=2
+
+/ Weight
+group(type=effect,ID=potioncore:weight,target=hitEntity,duration=10;type=particle,ID=largesmoke,size=(0.5,0.5,0.5),particleAmount=500)@luck=2
+
+/ ------ Destructive Effects ------
+
+/ Lightning
+type=entity,ID=LightningBolt@luck=-2
+
+/ Explosion
+type=explosion,damage=2@luck=-2
+
+/ ------ Nothing ------
+type=nothing@luck=-2@chance=160
+type=nothing@luck=-1@chance=120
+type=nothing@luck=0@chance=100
+type=nothing@luck=1@chance=80
+type=nothing@luck=2@chance=50

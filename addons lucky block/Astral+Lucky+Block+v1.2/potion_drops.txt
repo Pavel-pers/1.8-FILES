@@ -1,0 +1,109 @@
+/ ------ Good ------
+
+/ Health + Regeneration + Hearts
+group(type=effect,ID=6,range=4,amplifier=3;type=effect,ID=10,range=4,amplifier=1,duration=300;type=particle,ID=splashpotion,damage=8197;type=particle,ID=heart,size=(1.5,0.5,1.5),particleAmount=300;ID=lootplusplus:astral.little_heart,amount=#rand(3,5),posOffset=#circleOffset(0.0,2.0),NBTTag=(display=(Lore=["$rRestores 2 hearts when eaten."])))@luck=2
+
+/ Strenth + Resistance + Armor
+group(type=effect,ID=5,range=4,duration=600;type=effect,ID=11,range=4,amplifier=1,duration=600;type=particle,ID=splashpotion,damage=8265;group:1:(ID=lootplusplus:astral.lucky_boots,NBTTag=(display=(Name="$e$l#pName's Lucky Boots"),ench=#luckyBootsEnchantments);ID=lootplusplus:astral.lucky_leggings,NBTTag=(display=(Name="$e$l#pName's Lucky Leggings"),ench=#luckyLeggingsEnchantments);ID=lootplusplus:astral.lucky_chestplate,NBTTag=(display=(Name="$e$l#pName's Lucky Chestplate"),ench=#luckyChestplateEnchantments);ID=lootplusplus:astral.lucky_helmet,NBTTag=(display=(Name="$e$l#pName's Lucky Helmet"),ench=#luckyHelmetEnchantments)))@luck=2
+
+/ Speed + Quick Sand/Tiles
+group(type=effect,ID=speed,range=4,amplifier=3,duration=600;type=particle,ID=splashpotion,damage=8194;ID=lootplusplus:astral.#randList(quicksand,quicktiles),posOffset=#circleOffset(0.0,2.0),amount=20)@luck=2
+
+/ Health Boost + Fairies
+group(type=effect,ID=health_boost,range=4,amplifier=2,duration=600;type=particle,ID=splashpotion,damage=8194;type=entity,ID=Item,NBTTag=(CustomName=Fairy,CustomNameVisible=true,Item=(id=lootplusplus:astral.fairy,Count=1,tag=(display=(Lore=["$rRestores 10 hearts when used.","","$rIf you drop to 1 heart or less, saves","$ryour life and gives you 10 hearts.","","$r(Note though it won't save your life if","$ryou die too quickly and don't hit 1","$rheart)"]))),Riding=(id=Bat,CustomName=Fairy,Silent=true,ActiveEffects=[(Id=14,Duration=100000,Amplifier=1,ShowParticles=false)])),amount=#rand(2,3),posOffset=#circleOffset(2,3);type=command,ID="/gamerule commandBlockOutput false";type=command,ID="/entitydata @e[type=Bat,name=Fairy] {ForgeData:{LootPPCommands:{CommandList:["lppcondition testfor @e[type=Item,r=2] _if_true_ particle fireworksSpark ~0.5 ~0.5 ~0.5 0.3 0 0.3 0"],Repeat:true}}}")@luck=2
+
+/ Satuaration + Food
+group(type=effect,ID=23,range=4,amplifier=20,duration=1;type=block,ID=cake;type=particle,ID=splashpotion,damage=8261;type=item,ID=#randList(cake,pumpkin_pie,cooked_porkchop,cooked_porkchop,cooked_porkchop,cooked_beef,cooked_beef,cooked_beef),posOffset=#circleOffset(0.0,2.0),amount=30;ID=lootplusplus:astral.star_cookie,posOffset=#circleOffset(0.0,2.0),amount=#rand(1,3),NBTTag=(display=(Lore=["$rGives a random good potion effect when eaten."])))@luck=2
+
+/ Enchanting Table
+group(type=entity,ID=ThrownExpBottle,NBTTag=(Motion=#motionFromDirection(#rand(0,360),-70,0.4)),amount=#rand(20,30);type=item,ID=dye,damage=4,posOffset=#circleOffset(0.0,2.0),amount=#rand(20,40);type=block,ID=enchanting_table)@luck=2
+
+/ Enchanting Books + Repairing
+group(type=effect,ID=potioncore:repair,range=4,amplifier=1,duration=120;type=block,ID=anvil;type=item,ID=experience_bottle,posOffset=#circleOffset(0.0,2.0),amount=#rand(20,40);ID=enchanted_book,NBTTag=(StoredEnchantments=#randEnchantment),posOffset=#circleOffset(0.0,2.0),amount=#rand(10,12);type=particle,ID=splashpotion,damage=8195)@luck=2
+
+/ Positive Potions
+group(type=entity,ID=potioncore.CustomPotion,NBTTag=(Potion=(id=potioncore:custom_potion,tag=(CustomPotionEffects=[(Id=#randList(minecraft:haste,potioncore:repair,potioncore:extension,potioncore:recoil,potioncore:reach,potioncore:slowfall,potioncore:revival,potioncore:archery,potioncore:purity,potioncore:climb,potioncore:soildcore,potioncore:stepup,potioncore:antidote,minecraft:absorption,minecraft:health_boost),Duration=#randList(3600,9600))]),Count=1),Motion=#motionFromDirection(#rand(0,360),-70,0.4)),amount=7;type=entity,ID=ThrownPotion,NBTTag=(Potion=(id=373,Damage=#randList(1,2,3,5,6,9,11,13,14)+16384,Count=1),Motion=#motionFromDirection(#rand(0,360),-70,0.4)),amount=3)@luck=2
+
+/ Strength + Lucky Puppy
+group(type=effect,ID=5,range=4,amplifier=1,duration=600;type=particle,ID=splashpotion,damage=8201;type=entity,ID=Wolf,NBTTag=(Age=-1000000,CollarColor=#rand(0,14),Owner=#pName,Sitting=1,Equipment=[(id=lucky:astral_lucky_sword,Count=1,Damage=0,tag=(ench=[(id=16,lvl=#rand(3,8)),(id=#rand(17,18),lvl=#rand(1,5)),(id=#rand(19,20),lvl=#rand(1,2)),(id=21,lvl=#rand(1,5))])),(id=lootplusplus:astral.astral_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=lootplusplus:astral.astral_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=lootplusplus:astral.astral_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=lootplusplus:astral.astral_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],DropChances=[0f,0f,0f,0f,0f],CustomName="$e$l#pName's Lucky Puppy");type=command,ID="effect @e[type=Wolf,c=1] instant_health 1 20")@luck=2@chance=0.3
+
+/ Lucky Potion
+type=entity,ID=potioncore.CustomPotion,NBTTag=(Potion=(Count=1,id=potioncore:custom_potion,tag=(display=(Name="$e$lLucky Potion",color=16765490),CustomPotionEffects=#luckyPotionEffects)))@luck=2
+
+/ EPIC Lucky Potion
+type=entity,ID=potioncore.CustomPotion,NBTTag=(Potion=(Count=1,id=potioncore:custom_potion,tag=(display=(Name="$b$lEPIC $e$lLucky Potion",color=65535),CustomPotionEffects=[(Id=#randList(jump_boost,potioncore:stepup),Amplifier=#rand(0,3),Duration=#rand(5000,12000)),(Id=#randList(regeneration,potioncore:revival),Amplifier=#rand(0,3),Duration=#rand(5000,12000)),(Id=#randList(saturation,potioncore:slowfall),Amplifier=#rand(0,3),Duration=#rand(5000,12000)),(Id=#randList(strength,potioncore:reach),Amplifier=#rand(0,3),Duration=#rand(5000,12000)),(Id=#randList(potioncore:archery,speed),Amplifier=#rand(0,3),Duration=#rand(5000,12000)),(Id=#randList(haste,resistance),Amplifier=#rand(0,3),Duration=#rand(5000,12000)),(Id=#randList(potioncore:repair,potioncore:health_boost),Amplifier=#rand(0,3),Duration=#rand(5000,12000)),(Id=#randList(potioncore:recoil,absorption),Amplifier=#rand(0,3),Duration=#rand(5000,12000)),(Id=#randList(water_breathing,fire_resistance,potioncore:solidcore),Duration=#rand(5000,12000)),(Id=#randList(potioncore:antidote,potioncore:purity),Duration=#rand(5000,12000)),(Id=#randList(invisibility,potioncore:climb),Duration=#rand(5000,12000)),(Id=#randList(instant_health,potioncore:love,potioncore:cure),Duration=1)])))@luck=2
+
+/ Astral Snowmages
+group(type=entity,ID=SnowMan,NBTTag=(Attributes=[(Name=generic.maxHealth,Base=50f)],ActiveEffects=[(Id=12,Duration=100000,Amplifier=1,ShowParticles=false)],Equipment=[(id=lootplusplus:astral.throwing_star,Count=20),(id=lootplusplus:astral.astral_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=lootplusplus:astral.astral_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=lootplusplus:astral.astral_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=lootplusplus:astral.astral_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],DropChances=[2f,0f,0f,0f,0f],CustomName="$e$l#randList(Ichibo,Ubuntu,Potashi,Josayn,Mondo,Kirian,Pierson,Candre) The Astral Snowmage");ID=lootplusplus:astral.throwing_star,amount=#rand(10,20),posOffset=#circleOffset(0.0,2.0))@luck=2@chance=0.5
+group(type=entity,ID=SnowMan,NBTTag=(Attributes=[(Name=generic.maxHealth,Base=50f)],ActiveEffects=[(Id=12,Duration=100000,Amplifier=1,ShowParticles=false)],Equipment=[(id=lootplusplus:astral.throwing_star_fire,Count=20),(id=lootplusplus:astral.astral_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=lootplusplus:astral.astral_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=lootplusplus:astral.astral_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=lootplusplus:astral.astral_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],DropChances=[2f,0f,0f,0f,0f],CustomName="$e$l#randList(Ichibo,Ubuntu,Potashi,Josayn,Mondo,Kirian,Pierson,Candre) The Astral Flame Snowmage");ID=lootplusplus:astral.throwing_star_fire,amount=#rand(10,20),posOffset=#circleOffset(0.0,2.0))@luck=2@chance=0.5
+group(type=entity,ID=SnowMan,NBTTag=(Attributes=[(Name=generic.maxHealth,Base=50f)],ActiveEffects=[(Id=12,Duration=100000,Amplifier=1,ShowParticles=false)],Equipment=[(id=lootplusplus:astral.throwing_star_ice,Count=20),(id=lootplusplus:astral.astral_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=lootplusplus:astral.astral_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=lootplusplus:astral.astral_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=lootplusplus:astral.astral_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],DropChances=[2f,0f,0f,0f,0f],CustomName="$e$l#randList(Ichibo,Ubuntu,Potashi,Josayn,Mondo,Kirian,Pierson,Candre) The Astral Ice Snowmage");ID=lootplusplus:astral.throwing_star_ice,amount=#rand(10,20),posOffset=#circleOffset(0.0,2.0))@luck=2@chance=0.5
+group(type=entity,ID=SnowMan,NBTTag=(Attributes=[(Name=generic.maxHealth,Base=50f)],ActiveEffects=[(Id=12,Duration=100000,Amplifier=1,ShowParticles=false)],Equipment=[(id=lootplusplus:astral.throwing_star_poison,Count=20),(id=lootplusplus:astral.astral_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=lootplusplus:astral.astral_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=lootplusplus:astral.astral_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=lootplusplus:astral.astral_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],DropChances=[2f,0f,0f,0f,0f],CustomName="$e$l#randList(Ichibo,Ubuntu,Potashi,Josayn,Mondo,Kirian,Pierson,Candre) The Astral Poison Snowmage");ID=lootplusplus:astral.throwing_star_poison,amount=#rand(10,20),posOffset=#circleOffset(0.0,2.0))@luck=2@chance=0.5
+group(type=entity,ID=SnowMan,NBTTag=(Attributes=[(Name=generic.maxHealth,Base=50f)],ActiveEffects=[(Id=12,Duration=100000,Amplifier=1,ShowParticles=false)],Equipment=[(id=lootplusplus:astral.throwing_star_dark,Count=20),(id=lootplusplus:astral.astral_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=lootplusplus:astral.astral_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=lootplusplus:astral.astral_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=lootplusplus:astral.astral_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],DropChances=[2f,0f,0f,0f,0f],CustomName="$e$l#randList(Ichibo,Ubuntu,Potashi,Josayn,Mondo,Kirian,Pierson,Candre) The Astral Dark Snowmage");ID=lootplusplus:astral.throwing_star_dark,amount=#rand(10,20),posOffset=#circleOffset(0.0,2.0))@luck=2@chance=0.5
+
+/ Jump Boost + Slowfall + Clouds
+group(type=effect,ID=8,range=4,amplifier=4,duration=600;type=effect,ID=potioncore:slowfall,range=4,amplifier=2,duration=600;type=particle,ID=splashpotion,damage=8267;ID=lootplusplus:astral.#randList(cloud,fluffy_cloud),posOffset=#circleOffset(0.0,2.0),amount=20)@luck=2
+
+/ Water breathing + Fish
+group(type=effect,ID=13,range=4,duration=600;type=particle,ID=splashpotion,damage=8194;type=particle,ID=splash,posOffset=#circleOffset(0.0,2.0),amount=30;ID=fishing_rod;type=item,ID=fish,damage=#rand(0,3),posOffset=#circleOffset(0.0,2.0),amount=30)@luck=1
+
+/ Health Boost + Absorption + Gold Stuff
+group(type=effect,ID=21,range=4,amplifier=1,duration=600;type=effect,ID=22,amplifier=4,range=4,duration=600;type=particle,ID=splashpotion,damage=8227;type=item,ID=golden_apple,damage=#rand(0,1),posOffset=#circleOffset(0.0,2.0),amount=6;type=item,ID=#randList(gold_ingot,gold_ingot,gold_ingot,gold_block),posOffset=#circleOffset(0.0,2.0),amount=#rand(8,16))@luck=2@chance=0.7
+
+/ ------ Bad ------
+
+/ Knockback
+group(type=effect,ID=special_knockback,power=4,range=4,delay=0.1;type=particle,ID=splashpotion,damage=8194;type=particle,ID=explode,size=(1.5,1.0,1.5),particleAmount=500;type=fill,posOffset=(-1,0,-1),ID=lootplusplus:astral.cloud,size=(3,1,3))@luck=-2
+
+/ Damage
+group(type=effect,ID=7,amplifier=1,range=4;type=particle,ID=splashpotion,damage=8204;type=entity,ID=LuckyProjectile,NBTTag=(Motion=#motionFromDirection(#rand(0,360),-50,0.4),item=(id=lootplusplus:astral.astral_axe),damage=30.0),amount=20)@luck=-2
+
+/ Astral Stars
+group(type=effect,ID=7,amplifier=1,range=4;type=particle,ID=splashpotion,damage=8204;type=entity,ID=LuckyProjectile,NBTTag=(Motion=#motionFromDirection(#rand(0,360),-50,0.4),item=(id=lootplusplus:astral.throwing_star),damage=8.0),amount=20)@luck=-2
+
+/ Fire Stars
+group(type=effect,ID=7,amplifier=1,range=4;type=particle,ID=splashpotion,damage=8204;type=entity,ID=LuckyProjectile,NBTTag=(Motion=#motionFromDirection(#rand(0,360),-50,0.4),item=(id=lootplusplus:astral.throwing_star_fire),damage=0.0,impact=["type=effect,ID=special_fire,target=hitEntity,duration=30"]),amount=20)@luck=-2
+
+/ Poison Stars
+group(type=effect,ID=7,amplifier=1,range=4;type=particle,ID=splashpotion,damage=8204;type=entity,ID=LuckyProjectile,NBTTag=(Motion=#motionFromDirection(#rand(0,360),-50,0.4),item=(id=lootplusplus:astral.throwing_star_poison),damage=0.0,impact=["group(type=effect,ID=poison,target=hitEntity,amplifier=1,duration=30;type=effect,ID=nausea,target=hitEntity,duration=30)"]),amount=20)@luck=-2
+
+/ Ice Stars
+group(type=effect,ID=7,amplifier=1,range=4;type=particle,ID=splashpotion,damage=8204;type=entity,ID=LuckyProjectile,NBTTag=(Motion=#motionFromDirection(#rand(0,360),-50,0.4),item=(id=lootplusplus:astral.throwing_star_ice),damage=0.0,impact=["type=effect,ID=slowness,target=hitEntity,amplifier=3,duration=30"]),amount=20)@luck=-2
+
+/ Dark Stars
+group(type=effect,ID=7,amplifier=1,range=4;type=particle,ID=splashpotion,damage=8204;type=entity,ID=LuckyProjectile,NBTTag=(Motion=#motionFromDirection(#rand(0,360),-50,0.4),item=(id=lootplusplus:astral.throwing_star_dark),damage=0.0,impact=["group(type=effect,ID=wither,target=hitEntity,amplifier=1,duration=30;type=effect,ID=blindness,target=hitEntity,duration=30)"]),amount=20)@luck=-2
+
+/ Explosion Stars
+group(type=effect,ID=7,amplifier=1,range=4;type=particle,ID=splashpotion,damage=8204;type=entity,ID=LuckyProjectile,NBTTag=(Motion=#motionFromDirection(#rand(0,360),-50,0.4),item=(id=lootplusplus:astral.throwing_star_explode),damage=0.0,impact=["type=explosion,damage=1"]),amount=20)@luck=-2
+
+/ Fire + Lava
+group(type=command,ID="fill ~-1 ~ ~-1 ~1 ~ ~1 flowing_lava 8 keep";type=particle,ID=splashpotion,damage=8227;type=command,ID="setblock ~ ~ ~ fire 0 keep",posOffset=#circleOffset(0,3),amount=50;type=particle,ID=splashpotion,damage=8195)@luck=-2
+
+/ Hunger
+group(type=effect,ID=17,range=3,amplifier=100,duration=5;type=particle,ID=splashpotion,damage=8260;type=difficulty,ID=hard)@luck=-2
+
+/ Meteor
+group(type=difficulty,ID=hard;type=explosion,fire=true,damage=6;type=particle,ID=splashpotion,damage=8204;delay=1,type=block,ID=lootplusplus:astral.meteor,damage=#rand(0,15),posOffset=(0,-2,0);delay=1,type=block,ID=lootplusplus:astral.meteor,damage=#rand(0,15),posOffset=(1,-2,0);delay=1,type=block,ID=lootplusplus:astral.meteor,damage=#rand(0,15),posOffset=(1,-1,0);delay=1,type=block,ID=lootplusplus:astral.meteor,damage=#rand(0,15),posOffset=(0,-1,1);delay=1,type=block,ID=lootplusplus:astral.meteor,damage=#rand(0,15),posOffset=(0,-2,1);delay=1,type=block,ID=lootplusplus:astral.meteor,damage=#rand(0,15),posOffset=(1,-1,1))@luck=-2
+
+/ Blackout
+group(type=effect,ID=blindness,range=4,amplifier=3,duration=30;type=particle,ID=splashpotion,damage=8268;type=particle,ID=largesmoke,size=(1.5,1.0,1.5),particleAmount=500)@luck=-2
+
+/ Perplexity
+group(type=sound,ID=portal.travel,pitch=2.0;type=effect,range=4,ID=potioncore:perplexity,duration=120;type=particle,ID=splashpotion,damage=8193;type=particle,ID=witchMagic,size=(1.5,1.0,1.5),particleAmount=500)@luck=-2
+
+/ Disorganization
+group(type=sound,ID=mob.zombie.unfect,pitch=1.5;type=effect,range=4,ID=potioncore:disorganization,duration=1;type=particle,ID=splashpotion,damage=8193;type=particle,ID=fireworksSpark,size=(1.5,1.0,1.5),particleAmount=500)@luck=-2
+
+/ Spinning
+group(type=effect,range=4,ID=potioncore:spin,duration=10;type=particle,ID=splashpotion,damage=8235)@luck=-2
+
+/ Statue
+group(type=effect,range=4,ID=slowness,amplifier=127,duration=10;type=effect,range=4,ID=mining_fatigue,amplifier=127,duration=10;type=effect,range=4,ID=potioncore:weight,amplifier=127,duration=10;type=particle,ID=splashpotion,damage=8238)@luck=-2
+
+/ Negative Potions
+group(type=entity,ID=potioncore.CustomPotion,NBTTag=(Potion=(id=potioncore:custom_potion,tag=(CustomPotionEffects=[(Id=#randList(minecraft:mining_fatigue,minecraft:blindness,potioncore:rust,potioncore:vulnerable,potioncore:levitate,potioncore:klutz,potioncore:drown,potioncore:perplexity,potioncore:spin,potioncore:perplexity),Duration=#randList(3600,9600))]),Count=1),Motion=#motionFromDirection(#rand(0,360),-70,0.4)),amount=4;type=entity,ID=potioncore.CustomPotion,NBTTag=(Potion=(id=potioncore:custom_potion,tag=(CustomPotionEffects=[(Id=#randList(potioncore:teleport,potioncore:disorganization,potioncore:explode,potioncore:dispel,potioncore:fire,potioncore:lightning,potioncore:invert,potioncore:launch),Duration=1)]),Count=1),Motion=#motionFromDirection(#rand(0,360),-70,0.4)),amount=4;type=entity,ID=ThrownPotion,NBTTag=(Potion=(id=373,Damage=#randList(4,8,10,12)+16384,Count=1),Motion=#motionFromDirection(#rand(0,360),-70,0.4)),amount=2)@luck=-2
+
+/ Unlucky Potion
+type=entity,ID=potioncore.CustomPotion,NBTTag=(Potion=(Count=1,Damage=1,id=potioncore:custom_potion,tag=(display=(Name="$e$lUnlucky Potion",color=3803458),CustomPotionEffects=#unluckyPotionEffects)))@luck=-2
+
+/ EPIC Unlucky Potion
+type=entity,ID=potioncore.CustomPotion,NBTTag=(Potion=(Count=1,Damage=1,id=potioncore:custom_potion,tag=(display=(Name="$5$lEPIC $e$lUnlucky Potion",color=12386559),CustomPotionEffects=[(Id=#randList(slowness,weakness),Amplifier=#rand(0,3),Duration=#rand(5000,12000)),(Id=#randList(wither,potioncore:levitate),Amplifier=#rand(0,3),Duration=#rand(5000,12000)),(Id=#randList(potioncore:klutz,potioncore:weight),Amplifier=#rand(0,3),Duration=#rand(5000,12000)),(Id=#randList(blindness,poison,hunger),Amplifier=#rand(0,3),Duration=#rand(5000,12000)),(Id=#randList(potioncore:rust,mining_fatigue),Amplifier=#rand(0,3),Duration=#rand(5000,12000)),(Id=#randList(potioncore:perplexity,potioncore:drown),Duration=#rand(5000,12000)),(Id=#randList(potioncore:spin,nausea),Duration=#rand(5000,12000)),(Id=#randList(potioncore:launch,potioncore:teleport),Amplifier=#rand(0,3),Duration=1),(Id=#randList(potioncore:fire,instant_damage),Amplifier=#rand(0,3),Duration=1),(Id=#randList(potioncore:disorganization,potioncore:dispel),Duration=1),(Id=#randList(potioncore:explode,potioncore:lightning),Duration=1)])))@luck=-2

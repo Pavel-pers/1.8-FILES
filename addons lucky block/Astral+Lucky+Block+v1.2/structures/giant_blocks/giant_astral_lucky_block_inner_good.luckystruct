@@ -1,0 +1,37 @@
+>properties
+length=11
+height=9
+width=10
+
+>blocks
+
+/ all one lucky block
+
+4,3,7,lucky:lucky_block_astral,0,(Drops=["group( \
+
+/ break stages
+group( \
+ID=giant_astral_block_break_stage_1; \
+ID=giant_astral_block_break_stage_2,delay=1; \
+ID=giant_astral_block_break_stage_3,delay=2; \
+ID=giant_astral_block_break_stage_4,delay=3; \
+ID=giant_astral_block_break_stage_5,delay=4 \
+),type=structure,pos=[#]drop(pos),rotation=[#]drop(rotation); \
+
+/ remove
+type=fill,ID=air,pos=[#]sPos(0,0,0),pos2=[#]sPos(9,8,9),delay=5; \
+
+group:1:(\
+
+/ falling treasures
+type=entity,ID=FallingSand,NBTTag=(Block=#randList(diamond_block,emerald_block,gold_block,iron_block,redstone_block,lapis_block,coal_block)),amount=#rand(30,50),posOffset=#circleOffset(0,4),posOffsetY=#rand(5,200),delay=5; \
+
+/ astral snowmages
+group(\
+delay=5,type=entity,pos=[#]sPos(4,4,4),posOffset=#circleOffset(0,4),ID=SnowMan,NBTTag=(Attributes=[(Name=generic.maxHealth,Base=50f)],ActiveEffects=[(Id=12,Duration=100000,Amplifier=1,ShowParticles=false)],Equipment=[(id=lootplusplus:astral.throwing_star,Count=20),(id=lootplusplus:astral.astral_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=lootplusplus:astral.astral_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=lootplusplus:astral.astral_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=lootplusplus:astral.astral_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],DropChances=[2f,0f,0f,0f,0f],CustomName="$e$l#randList(Ichibo,Ubuntu,Potashi,Josayn,Mondo,Kirian,Pierson,Candre) The Astral Snowmage");\
+delay=5,type=entity,pos=[#]sPos(4,4,4),posOffset=#circleOffset(0,4),ID=SnowMan,NBTTag=(Attributes=[(Name=generic.maxHealth,Base=50f)],ActiveEffects=[(Id=12,Duration=100000,Amplifier=1,ShowParticles=false)],Equipment=[(id=lootplusplus:astral.throwing_star_fire,Count=20),(id=lootplusplus:astral.astral_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=lootplusplus:astral.astral_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=lootplusplus:astral.astral_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=lootplusplus:astral.astral_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],DropChances=[2f,0f,0f,0f,0f],CustomName="$e$l#randList(Ichibo,Ubuntu,Potashi,Josayn,Mondo,Kirian,Pierson,Candre) The Astral Flame Snowmage");\
+delay=5,type=entity,pos=[#]sPos(4,4,4),posOffset=#circleOffset(0,4),ID=SnowMan,NBTTag=(Attributes=[(Name=generic.maxHealth,Base=50f)],ActiveEffects=[(Id=12,Duration=100000,Amplifier=1,ShowParticles=false)],Equipment=[(id=lootplusplus:astral.throwing_star_ice,Count=20),(id=lootplusplus:astral.astral_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=lootplusplus:astral.astral_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=lootplusplus:astral.astral_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=lootplusplus:astral.astral_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],DropChances=[2f,0f,0f,0f,0f],CustomName="$e$l#randList(Ichibo,Ubuntu,Potashi,Josayn,Mondo,Kirian,Pierson,Candre) The Astral Ice Snowmage");\
+delay=5,type=entity,pos=[#]sPos(4,4,4),posOffset=#circleOffset(0,4),ID=SnowMan,NBTTag=(Attributes=[(Name=generic.maxHealth,Base=50f)],ActiveEffects=[(Id=12,Duration=100000,Amplifier=1,ShowParticles=false)],Equipment=[(id=lootplusplus:astral.throwing_star_poison,Count=20),(id=lootplusplus:astral.astral_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=lootplusplus:astral.astral_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=lootplusplus:astral.astral_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=lootplusplus:astral.astral_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],DropChances=[2f,0f,0f,0f,0f],CustomName="$e$l#randList(Ichibo,Ubuntu,Potashi,Josayn,Mondo,Kirian,Pierson,Candre) The Astral Poison Snowmage");\
+delay=5,type=entity,pos=[#]sPos(4,4,4),posOffset=#circleOffset(0,4),ID=SnowMan,NBTTag=(Attributes=[(Name=generic.maxHealth,Base=50f)],ActiveEffects=[(Id=12,Duration=100000,Amplifier=1,ShowParticles=false)],Equipment=[(id=lootplusplus:astral.throwing_star_dark,Count=20),(id=lootplusplus:astral.astral_helmet,Count=1,Damage=0,tag=(ench=#luckyHelmetEnchantments)),(id=lootplusplus:astral.astral_chestplate,Count=1,Damage=0,tag=(ench=#luckyChestplateEnchantments)),(id=lootplusplus:astral.astral_leggings,Count=1,Damage=0,tag=(ench=#luckyLeggingsEnchantments)),(id=lootplusplus:astral.astral_boots,Count=1,Damage=0,tag=(ench=#luckyBootsEnchantments))],DropChances=[2f,0f,0f,0f,0f],CustomName="$e$l#randList(Ichibo,Ubuntu,Potashi,Josayn,Mondo,Kirian,Pierson,Candre) The Astral Dark Snowmage"))\
+
+))"])

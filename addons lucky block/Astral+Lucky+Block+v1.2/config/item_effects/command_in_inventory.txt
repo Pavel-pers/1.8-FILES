@@ -1,0 +1,5 @@
+lootplusplus:astral.fairy_____-1_____{}_____1.0_____scoreboard objectives add astralHealth health
+lootplusplus:astral.fairy_____-1_____{}_____1.0_____scoreboard objectives add astralFairyCdwn dummy
+lootplusplus:astral.fairy_____-1_____{}_____1.0_____lppcondition clear @p[r=0,score_astralHealth=2,score_astralHealth_min=1,score_astralFairyCdwn=0] lootplusplus:astral.fairy 0 1 _if_true_ lppcondition effect @p[r=0,score_astralHealth=2] instant_health 5 _if_true_ lppcondition playsound random.levelup @a[r=16] ~ ~ ~ 1.0 0.5 _if_true_ scoreboard players set @p[r=0] astralFairyCdwn 10
+lootplusplus:astral.fairy_____-1_____{}_____1.0_____scoreboard players add @p[r=0] astralFairyCdwn 0
+lootplusplus:astral.fairy_____-1_____{}_____1.0_____scoreboard players remove @p[r=0,score_astralFairyCdwn_min=1] astralFairyCdwn 1

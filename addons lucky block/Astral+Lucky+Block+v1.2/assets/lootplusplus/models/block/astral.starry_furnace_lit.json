@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "lootplusplus:blocks/astral.starry",
+        "front": "lootplusplus:blocks/astral.furnace_front_on",
+        "side": "lootplusplus:blocks/astral.furnace_side"
+    }
+}

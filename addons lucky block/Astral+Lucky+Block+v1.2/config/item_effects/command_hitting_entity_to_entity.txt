@@ -1,0 +1,5 @@
+lootplusplus:astral.star_slicer_____-1_____{}_____0.1_____summon lootplusplus.ThrownItem ~ ~4 ~ {ItemThrown:"lootplusplus:astral.throwing_star"}
+lootplusplus:astral.star_slicer_____-1_____{}_____0.0075_____summon lootplusplus.ThrownItem ~ ~1 ~ {ItemThrown:"lootplusplus:astral.throwing_star_fire"}
+lootplusplus:astral.star_slicer_____-1_____{}_____0.0075_____summon lootplusplus.ThrownItem ~ ~1 ~ {ItemThrown:"lootplusplus:astral.throwing_star_ice"}
+lootplusplus:astral.star_slicer_____-1_____{}_____0.0075_____summon lootplusplus.ThrownItem ~ ~1 ~ {ItemThrown:"lootplusplus:astral.throwing_star_poison"}
+lootplusplus:astral.star_slicer_____-1_____{}_____0.0075_____summon lootplusplus.ThrownItem ~ ~1 ~ {ItemThrown:"lootplusplus:astral.throwing_star_dark"}

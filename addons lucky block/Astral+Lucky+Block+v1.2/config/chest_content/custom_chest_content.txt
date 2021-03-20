@@ -1,0 +1,23 @@
+# Awesome Stuff
+astralAwesomeStuff-minecraft:diamond-1-2-15
+astralAwesomeStuff-minecraft:emerald-1-2-10
+astralAwesomeStuff-minecraft:gold_ingot-2-4-15
+astralAwesomeStuff-minecraft:golden_apple-1-2-10
+astralAwesomeStuff-minecraft:golden_apple-1-1-5-1
+astralAwesomeStuff-lucky:lucky_block-1-2-5
+astralAwesomeStuff-lucky:lucky_block_astral-1-2-5
+astralAwesomeStuff-lucky:lucky_block-1-1-3-0-{Luck:80}
+astralAwesomeStuff-lucky:lucky_block_astral-1-1-3-0-{Luck:80}
+astralAwesomeStuff-lucky:lucky_potion-1-2-5-0-{Luck:100}
+astralAwesomeStuff-lucky:astral_lucky_potion-1-2-5-0-{Luck:100}
+astralAwesomeStuff-lucky:lucky_potion-1-2-5-0-{Luck:-100}
+astralAwesomeStuff-lucky:astral_lucky_potion-1-2-5-0-{Luck:-100}
+
+# Food
+astralFood-minecraft:cake-1-1-10
+astralFood-minecraft:cookie-10-20-15
+astralFood-minecraft:cooked_porkchop-3-6-10
+astralFood-minecraft:cooked_beef-3-6-10
+astralFood-lootplusplus:astral.star_cookie-1-1-5-0-{display:{Lore:["§rGives a random good potion effect when eaten."]}}
+astralFood-minecraft:golden_apple-1-2-5
+astralFood-minecraft:golden_apple-1-1-1-1

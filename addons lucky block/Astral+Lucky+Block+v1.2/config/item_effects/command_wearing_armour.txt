@@ -1,0 +1,28 @@
+# Jet Boots
+lootplusplus:astral.mech_boots_____-1_____{}_____1.0_____scoreboard objectives add astralJetBoots stat.flyOneCm
+lootplusplus:astral.mech_boots_____-1_____{}_____1.0_____scoreboard objectives add astralJetFuel dummy
+lootplusplus:astral.mech_boots_____-1_____{}_____1.0_____scoreboard players add @p[r=0] astralJetFuel 0
+lootplusplus:astral.mech_boots_____-1_____{}_____1.0_____lppcondition clear @p[r=0,score_astralJetFuel=0] blaze_powder 0 1 _if_true_ scoreboard players set @p[r=0] astralJetFuel 200
+lootplusplus:astral.mech_boots_____-1_____{}_____1.0_____lppcondition lppeffect @p[r=0,score_astralJetFuel_min=1] potioncore:flight 10 0 true 
+lootplusplus:astral.mech_boots_____-1_____{}_____1.0_____lppcondition scoreboard players remove @p[r=0,score_astralJetFuel_min=1,score_astralJetBoots_min=40] astralJetFuel 1 _if_true_ particle flame ~0.5 ~-0.2 ~0.5 0.2 0.2 0.2 0 2
+lootplusplus:astral.mech_boots_____-1_____{}_____1.0_____scoreboard players set @p[r=0] astralJetBoots 0
+lootplusplus:astral.mech_boots_____-1_____{}_____1.0_____effect @e[r=0,type=!Player] potioncore:slowfall 1 1 true
+
+# Mage Helmet and Chestplate
+lootplusplus:astral.mage_helmet_____-1_____{}_____1.0_____effect @e[r=0,c=1] blindness 0
+lootplusplus:astral.mage_chestplate_____-1_____{}_____1.0_____effect @e[r=0,c=1] nausea 0
+
+# Mage Leggings
+lootplusplus:astral.mage_leggings_____-1_____{}_____1.0_____effect @e[r=0,c=1] slowness 0
+lootplusplus:astral.mage_leggings_____-1_____{}_____1.0_____scoreboard objectives add astralMageLegsS stat.sprintOneCm
+lootplusplus:astral.mage_leggings_____-1_____{}_____1.0_____scoreboard objectives add astralMageLegsF stat.flyOneCm
+lootplusplus:astral.mage_leggings_____-1_____{}_____1.0_____lppcondition testfor @p[r=0,score_astralMageLegsS_min=1] _if_true_ fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 ice 0 replace flowing_water 0
+lootplusplus:astral.mage_leggings_____-1_____{}_____1.0_____lppcondition testfor @p[r=0,score_astralMageLegsS_min=1] _if_true_ fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 ice 0 replace water 0
+lootplusplus:astral.mage_leggings_____-1_____{}_____1.0_____lppcondition testfor @p[r=0,score_astralMageLegsS_min=1] _if_true_ fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 obsidian 0 replace flowing_lava 0
+lootplusplus:astral.mage_leggings_____-1_____{}_____1.0_____lppcondition testfor @p[r=0,score_astralMageLegsS_min=1] _if_true_ fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 obsidian 0 replace lava 0
+lootplusplus:astral.mage_leggings_____-1_____{}_____1.0_____lppcondition testfor @p[r=0,score_astralMageLegsF_min=1] _if_true_ fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 ice 0 replace water 0
+lootplusplus:astral.mage_leggings_____-1_____{}_____1.0_____lppcondition testfor @p[r=0,score_astralMageLegsF_min=1] _if_true_ fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 ice 0 replace flowing_water 0
+lootplusplus:astral.mage_leggings_____-1_____{}_____1.0_____lppcondition testfor @p[r=0,score_astralMageLegsF_min=1] _if_true_ fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 obsidian 0 replace lava 0
+lootplusplus:astral.mage_leggings_____-1_____{}_____1.0_____lppcondition testfor @p[r=0,score_astralMageLegsF_min=1] _if_true_ fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 obsidian 0 replace flowing_lava 0
+lootplusplus:astral.mage_leggings_____-1_____{}_____1.0_____scoreboard players set @p[r=0] astralMageLegsS 0
+lootplusplus:astral.mage_leggings_____-1_____{}_____1.0_____scoreboard players set @p[r=0] astralMageLegsF 0

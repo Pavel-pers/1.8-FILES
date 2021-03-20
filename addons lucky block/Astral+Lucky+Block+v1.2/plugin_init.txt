@@ -1,0 +1,4 @@
+id=lucky_block_astral
+sword_id=astral_lucky_sword
+bow_id=astral_lucky_bow
+potion_id=astral_lucky_potion

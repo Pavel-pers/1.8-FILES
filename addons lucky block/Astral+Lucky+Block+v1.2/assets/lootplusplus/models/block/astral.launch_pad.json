@@ -1,0 +1,7 @@
+{
+    "parent": "block/carpet",
+    "textures": {
+        "particle": "lootplusplus:blocks/astral.launch_pad",
+        "wool": "lootplusplus:blocks/astral.launch_pad"
+    }
+}

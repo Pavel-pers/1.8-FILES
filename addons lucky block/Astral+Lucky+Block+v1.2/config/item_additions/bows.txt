@@ -1,0 +1,2 @@
+astral.swordbow_diamond_____Diamond Swordbow_____1561_____1.0_____20_____1_____12_____diamond_____-1
+astral.arm_cannon_____Arm Cannon_____2000_____0.0_____20_____0_____30_____none_____-1_____lootplusplus:astral.arm_cannon_shot

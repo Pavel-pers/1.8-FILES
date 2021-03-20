@@ -1,0 +1,2 @@
+astral.lucky_axe_____Lucky Axe_____lucky:lucky_block
+astral.astral_axe_____Heavenly Axe_____lucky:lucky_block_astral

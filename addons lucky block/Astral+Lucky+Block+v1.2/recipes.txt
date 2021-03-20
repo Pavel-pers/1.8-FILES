@@ -1,0 +1,2 @@
+ono,nln,ono,o,obsidian,n,gold_nugget,l,lucky:lucky_block
+ono,nln,ono,o,obsidian,n,gold_nugget,l,nether_star

@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "axis=y":  { "model": "lootplusplus:astral.meteor" },
+        "axis=z":   { "model": "lootplusplus:astral.meteor", "x": 90 },
+        "axis=x":   { "model": "lootplusplus:astral.meteor", "x": 90, "y": 90 }
+    }
+}
+

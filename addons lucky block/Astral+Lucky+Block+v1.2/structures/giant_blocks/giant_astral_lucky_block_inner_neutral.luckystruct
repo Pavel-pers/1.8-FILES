@@ -1,0 +1,32 @@
+>properties
+length=11
+height=9
+width=10
+
+>blocks
+
+/ all one lucky block
+
+4,3,7,lucky:lucky_block_astral,0,(Drops=["group( \
+
+/ break stages
+group( \
+ID=giant_astral_block_break_stage_1; \
+ID=giant_astral_block_break_stage_2,delay=1; \
+ID=giant_astral_block_break_stage_3,delay=2; \
+ID=giant_astral_block_break_stage_4,delay=3; \
+ID=giant_astral_block_break_stage_5,delay=4 \
+),type=structure,pos=[#]drop(pos),rotation=[#]drop(rotation); \
+
+/ remove
+type=fill,ID=air,pos=[#]sPos(0,0,0),pos2=[#]sPos(9,8,9),delay=5; \
+
+/ giant or astral hero
+
+group:1:( \
+
+/astral hero and throwing stars
+group(type=difficulty,ID=hard;type=entity,ID=lootplusplus.ThrownItem,pos=[#]sPos(4,4,4),NBTTag=(ItemThrown=lootplusplus:astral.label,CustomName="$e$lAstral Hero",CustomNameVisible=true,Riding=(id=PigZombie,CustomName="$e$lAstral Hero",Equipment=[(id=lucky:astral_lucky_sword,Count=1,tag=(Unbreakable=true,Luck=100,display=(Name="$e$lSword of the Heavens",Lore=["","$9Dropped by the Astral Hero"]),ench=[(id=17,lvl=#rand(1,3)),(id=18,lvl=#rand(1,3)),(id=19,lvl=#rand(1,2)),(id=20,lvl=#rand(1,2)),(id=21,lvl=#rand(1,5))],AttributeModifiers=[(AttributeName=generic.attackDamage,Name=attack,Amount=#rand(12,16),Operation=0,UUIDLeast=11,UUIDMost=3),(AttributeName=generic.movementSpeed,Name=speed,Amount=0.2f,Operation=1,UUIDLeast=11,UUIDMost=1),(AttributeName=potioncore.reach,Name=reach,Amount=2,Operation=0,UUIDLeast=11,UUIDMost=2)])),(id=lootplusplus:astral.astral_boots,Count=1,tag=(Unbreakable=true,display=(Name="$e$lTall Astral Lucky Boots",Lore=["$7Step-Up I","","$9Dropped by the Astral Hero"]),ench=#luckyBootsEnchantments,AttributeModifiers=[(AttributeName=generic.attackDamage,Name=attack,Amount=0.2,Operation=1,UUIDLeast=15,UUIDMost=3),(AttributeName=generic.movementSpeed,Name=speed,Amount=0.1f,Operation=1,UUIDLeast=15,UUIDMost=1),(AttributeName=potioncore.stepHeight,Name=step,Amount=0.5f,Operation=0,UUIDLeast=14,UUIDMost=2)])),(Count=1,id=lootplusplus:astral.astral_leggings,tag=(Unbreakable=true,display=(Name="$e$lNinja's Astral Lucky Leggings",Lore=["$7Quick Attack I","","$9Dropped by the Astral Hero"]),ench=#luckyLeggingsEnchantments,AttributeModifiers=[(AttributeName=generic.attackDamage,Name=attack,Amount=0.2,Operation=1,UUIDLeast=14,UUIDMost=3),(AttributeName=generic.movementSpeed,Name=speed,Amount=0.1f,Operation=1,UUIDLeast=14,UUIDMost=1),(AttributeName=potioncore.attackSpeed,Name=knockback,Amount=0.1,Operation=1,UUIDLeast=14,UUIDMost=2)])),(Count=1,id=lootplusplus:astral.astral_chestplate,tag=(Unbreakable=true,display=(Name="$e$lHearty Astral Lucky Chestplate",Lore=["$7Health Boost II","","$9Dropped by the Astral Hero"]),ench=#luckyChestplateEnchantments,AttributeModifiers=[(AttributeName=generic.attackDamage,Name=attack,Amount=0.2,Operation=1,UUIDLeast=13,UUIDMost=3),(AttributeName=generic.movementSpeed,Name=speed,Amount=0.1f,Operation=1,UUIDLeast=13,UUIDMost=1),(AttributeName=generic.maxHealth,Name=health,Amount=8,Operation=0,UUIDLeast=13,UUIDMost=2)])),(Count=1,id=lootplusplus:astral.astral_helmet,tag=(Unbreakable=true,display=(Name="$e$lAccurate Astral Lucky Helmet",Lore=["$7Accurate Shot I","","$9Dropped by the Astral Hero"]),ench=#luckyHelmetEnchantments,AttributeModifiers=[(AttributeName=generic.attackDamage,Name=attack,Amount=0.2,Operation=1,UUIDLeast=12,UUIDMost=3),(AttributeName=generic.movementSpeed,Name=speed,Amount=0.1f,Operation=1,UUIDLeast=12,UUIDMost=1),(AttributeName=potioncore.projectileDamage,Name=projectile,Amount=0.75f,Operation=1,UUIDLeast=12,UUIDMost=2)]))],DropChances=[#randList(0,0,0,2)f,#randList(0,0,0,2)f,#randList(0,0,0,2)f,#randList(0,0,0,2)f,#randList(0,0,0,2)f],Attributes=[(Name=generic.maxHealth,Base=100f)])),delay=5;ID=lootplusplus:astral.throwing_#randList(star,star,star,star,star_ice,star_fire,star_poison,star_dark,star_explode),pos=[#]sPos(4,4,4),posOffset=#circleOffset(0,4),amount=#rand(40,60),delay=5)) \
+
+)"])
+

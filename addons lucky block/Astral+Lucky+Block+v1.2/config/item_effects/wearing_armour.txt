@@ -1,0 +1,5 @@
+lootplusplus:astral.mech_leggings_____-1_____{}_____8_____2_____2_____1.0_____none
+lootplusplus:astral.mech_helmet_____-1_____{}_____16_____225_____0_____1.0_____none
+lootplusplus:astral.mage_boots_____-1_____{}_____12_____2_____0_____1.0_____none
+lootplusplus:astral.mage_helmet_____-1_____{}_____potioncore:purity_____2_____0_____1.0_____none
+lootplusplus:astral.mage_chestplate_____-1_____{}_____potioncore:antidote_____2_____0_____1.0_____none

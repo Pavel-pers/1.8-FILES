@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "lootplusplus:blocks/astral.meteor",
+        "side": "lootplusplus:blocks/astral.meteor_inverted"
+    }
+}

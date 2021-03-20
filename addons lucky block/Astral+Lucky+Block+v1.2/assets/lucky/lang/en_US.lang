@@ -1,0 +1,14 @@
+tile.luckyBlockAstral.name=Astral Lucky Block
+
+item.astralLuckySword.name=Sword of the Heavens
+item.astralLuckyBow.name=Star Shooter
+item.astralLuckyPotion.name=Astral Lucky Potion
+
+potion.potency.4=V
+potion.potency.19=XX
+potion.potency.79=80
+potion.potency.99=100
+enchantment.level.20=XX
+enchantment.level.100=100
+enchantment.level.1000=1000
+

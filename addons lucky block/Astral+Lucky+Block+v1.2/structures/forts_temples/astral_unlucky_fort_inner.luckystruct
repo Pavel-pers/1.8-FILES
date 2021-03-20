@@ -1,0 +1,10 @@
+>properties
+length=5
+height=1
+width=5
+
+>blocks
+1,0,1,lucky:lucky_block_astral,0,(Luck=-80)
+3,0,1,lucky:lucky_block_astral,0,(Luck=-80)
+1,0,3,lucky:lucky_block_astral,0,(Luck=-80)
+3,0,3,lucky:lucky_block_astral,0,(Luck=-80)
